@@ -22,27 +22,27 @@ final class RestrictedIfRuleTest extends RuleTestCase
     {
         $this->analyse([__DIR__ . '/data/if-restricted.php'], [
             [
-                'Complex if conditions (&&, ||, ==, !=, etc.) are not allowed in spaghetti code. Use unary conditions only.',
-                9,
-            ],
-            [
-                'If statement body without a single goto statement is not allowed in spaghetti code.',
-                9,
-            ],
-            [
                 'Else clauses are not allowed in spaghetti code.',
                 9,
             ],
             [
                 'Complex if conditions (&&, ||, ==, !=, etc.) are not allowed in spaghetti code. Use unary conditions only.',
+                9,
+            ],
+            [
+                'If statement body without a single goto statement is not allowed in spaghetti code.',
+                9,
+            ],
+            [
+                'Elseif clauses are not allowed in spaghetti code.',
+                16,
+            ],
+            [
+                'Complex if conditions (&&, ||, ==, !=, etc.) are not allowed in spaghetti code. Use unary conditions only.',
                 16,
             ],
             [
                 'If statement body without a single goto statement is not allowed in spaghetti code.',
-                16,
-            ],
-            [
-                'Elseif clauses are not allowed in spaghetti code.',
                 16,
             ],
             [
