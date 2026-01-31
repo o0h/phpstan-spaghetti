@@ -1,0 +1,11 @@
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
+    excludePaths:
+        - tests/Rules/Spaghetti/*/data/*
+    strictRules:
+        booleansInConditions: false
+        dynamicCallOnStaticMethod: false
+        numericOperandsInArithmeticOperators: false

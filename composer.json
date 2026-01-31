@@ -1,0 +1,55 @@
+{
+    "name": "o0h/phpstan-spaghetti",
+    "description": "PHPStan rules to enforce SPAGHETTI code style",
+    "type": "phpstan-extension",
+    "license": "MIT",
+    "keywords": ["phpstan", "phpstan-extension", "static-analysis", "spaghetti-code", "code-quality"],
+    "homepage": "https://github.com/o0h/phpstan-spaghetti",
+    "authors": [
+        {
+            "name": "o0h",
+            "email": "dev@o0h.in"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "phpstan/phpstan": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "O0h\\PHPStanSpaghetti\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "O0h\\PHPStanSpaghetti\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse --memory-limit=256M",
+        "cs-fix": "php-cs-fixer fix",
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "ci": ["@cs-check", "@phpstan", "@test"]
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
+    }
+}

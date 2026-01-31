@@ -1,0 +1,11 @@
+# Local config overrides (non-dist versions)
+phpstan.neon
+.php-cs-fixer.php
+.php_cs
+
+# Cache files
+*.cache
+
+# Composer
+vendor/
+composer.lock

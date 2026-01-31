@@ -1,0 +1,86 @@
+parameters:
+	spaghettiRules:
+		enabled: true
+
+parametersSchema:
+	spaghettiRules: structure([
+		enabled: bool()
+	])
+
+conditionalTags:
+	# ControlFlow
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoLoopsRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoSwitchMatchRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\RestrictedIfRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoTryCatchRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoReturnRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoYieldRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	# Functions
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Functions\NoFunctionDefinitionRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Functions\NoCallableArgumentRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	# ObjectOriented
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoClassLikeDefinitionRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoObjectInstantiationRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoObjectAccessRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	# Operators
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoTernaryOperatorRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoNullCoalesceRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoSpaceshipOperatorRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	# Structure
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Structure\NoNamespaceRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Structure\NoTypeDeclarationRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
+
+services:
+	# ControlFlow
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoLoopsRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoSwitchMatchRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\RestrictedIfRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoTryCatchRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoReturnRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoYieldRule
+	# Functions
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Functions\NoFunctionDefinitionRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Functions\NoCallableArgumentRule
+	# ObjectOriented
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoClassLikeDefinitionRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoObjectInstantiationRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoObjectAccessRule
+	# Operators
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoTernaryOperatorRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoNullCoalesceRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoSpaceshipOperatorRule
+	# Structure
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Structure\NoNamespaceRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Structure\NoTypeDeclarationRule
