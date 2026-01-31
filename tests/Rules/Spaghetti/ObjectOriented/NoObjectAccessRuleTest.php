@@ -30,11 +30,11 @@ final class NoObjectAccessRuleTest extends RuleTestCase
                 9,
             ],
             [
-                'Method calls (->) are not allowed in spaghetti code.',
+                'Nullsafe method calls (?->) are not allowed in spaghetti code.',
                 12,
             ],
             [
-                'Nullsafe method calls (?->) are not allowed in spaghetti code.',
+                'Method calls (->) are not allowed in spaghetti code.',
                 12,
             ],
             [
