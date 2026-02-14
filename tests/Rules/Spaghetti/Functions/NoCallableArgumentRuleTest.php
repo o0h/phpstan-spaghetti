@@ -22,31 +22,31 @@ final class NoCallableArgumentRuleTest extends RuleTestCase
     {
         $this->analyse([__DIR__ . '/data/callable-arguments.php'], [
             [
-                'Closures cannot be passed as function arguments in spaghetti code.',
+                'Closures cannot be passed as function arguments in spaghetti code. (Function: array_map, Argument: #1)',
                 8,
             ],
             [
-                'Arrow functions cannot be passed as function arguments in spaghetti code.',
+                'Arrow functions cannot be passed as function arguments in spaghetti code. (Function: array_filter, Argument: #2)',
                 13,
             ],
             [
-                'Closures cannot be passed as function arguments in spaghetti code.',
+                'Closures cannot be passed as function arguments in spaghetti code. (Function: usort, Argument: #2)',
                 16,
             ],
             [
-                'Callable values cannot be passed as function arguments in spaghetti code.',
+                'Callable values cannot be passed as function arguments in spaghetti code. (Function: array_map, Argument: #1)',
                 22,
             ],
             [
-                'Callable values cannot be passed as function arguments in spaghetti code.',
+                'Callable values cannot be passed as function arguments in spaghetti code. (Function: array_map, Argument: #1)',
                 26,
             ],
             [
-                'Callable values cannot be passed as function arguments in spaghetti code.',
+                'Callable values cannot be passed as function arguments in spaghetti code. (Function: array_map, Argument: #1)',
                 31,
             ],
             [
-                'Callable values cannot be passed as function arguments in spaghetti code.',
+                'Callable values cannot be passed as function arguments in spaghetti code. (Function: array_map, Argument: #1)',
                 34,
             ],
         ]);
