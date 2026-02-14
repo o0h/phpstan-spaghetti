@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.4](https://github.com/o0h/phpstan-spaghetti/compare/v0.0.3...v0.0.4) - 2026-02-14
+- add rule to prohibit instanceof operator in spaghetti code by @o0h in https://github.com/o0h/phpstan-spaghetti/pull/8
+- Update README by @o0h in https://github.com/o0h/phpstan-spaghetti/pull/10
+
 ## [v0.0.3](https://github.com/o0h/phpstan-spaghetti/compare/v0.0.2...v0.0.3) - 2026-02-14
 - add rule to prohibit throw statements in spaghetti code by @o0h in https://github.com/o0h/phpstan-spaghetti/pull/6
 
