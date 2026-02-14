@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.3](https://github.com/o0h/phpstan-spaghetti/compare/v0.0.2...v0.0.3) - 2026-02-14
+- add rule to prohibit throw statements in spaghetti code by @o0h in https://github.com/o0h/phpstan-spaghetti/pull/6
+
 ## [v0.0.2](https://github.com/o0h/phpstan-spaghetti/compare/v0.0.1...v0.0.2) - 2026-02-14
 - add rules for callable arguments in static and method calls by @o0h in https://github.com/o0h/phpstan-spaghetti/pull/4
 
