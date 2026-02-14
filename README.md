@@ -54,7 +54,7 @@ parameters:
 
 ## Rules
 
-PHPStan Spaghetti provides 20 rules organized into 5 categories to enforce true spaghetti code principles.
+PHPStan Spaghetti provides 21 rules organized into 5 categories to enforce true spaghetti code principles.
 
 ### Control Flow
 
@@ -149,6 +149,10 @@ Prohibits accessing object properties and methods (`->`, `::`, `?->`).
 #### NoInstanceofRule
 
 Prohibits `instanceof` operator. Spaghetti code shouldn't use objects anyway.
+
+#### NoTypeCheckFunctionRule
+
+Prohibits type check functions (`is_a()`, `is_subclass_of()`, `get_class()`, `get_parent_class()`). Spaghetti code shouldn't use objects anyway.
 
 ### Operators
 
