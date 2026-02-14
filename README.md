@@ -54,7 +54,7 @@ parameters:
 
 ## Rules
 
-PHPStan Spaghetti provides 16 rules organized into 5 categories to enforce true spaghetti code principles.
+PHPStan Spaghetti provides 20 rules organized into 5 categories to enforce true spaghetti code principles.
 
 ### Control Flow
 
@@ -110,6 +110,10 @@ Prohibits `return` statements. Use inline code and `goto` instead.
 
 Prohibits `yield` and `yield from` expressions. No generators allowed in spaghetti code.
 
+#### NoThrowRule
+
+Prohibits `throw` statements. Handle errors with conditional checks and `goto`.
+
 ### Functions
 
 #### NoFunctionDefinitionRule
@@ -119,6 +123,14 @@ Prohibits user-defined functions. Use inline code with `goto` statements instead
 #### NoCallableArgumentRule
 
 Prohibits using callable types as function arguments (closures, arrow functions, string callables, etc.).
+
+#### NoCallableArgumentInMethodCallRule
+
+Prohibits using callable types as method call arguments.
+
+#### NoCallableArgumentInStaticCallRule
+
+Prohibits using callable types as static method call arguments.
 
 ### Object-Oriented Programming
 
@@ -133,6 +145,10 @@ Prohibits object instantiation with `new` keyword.
 #### NoObjectAccessRule
 
 Prohibits accessing object properties and methods (`->`, `::`, `?->`).
+
+#### NoInstanceofRule
+
+Prohibits `instanceof` operator. Spaghetti code shouldn't use objects anyway.
 
 ### Operators
 
