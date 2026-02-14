@@ -17,6 +17,8 @@ conditionalTags:
 		phpstan.rules.rule: %spaghettiRules.enabled%
 	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoTryCatchRule:
 		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoThrowRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
 	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoReturnRule:
 		phpstan.rules.rule: %spaghettiRules.enabled%
 	O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoYieldRule:
@@ -60,6 +62,8 @@ services:
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\RestrictedIfRule
 	-
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoTryCatchRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoThrowRule
 	-
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ControlFlow\NoReturnRule
 	-
