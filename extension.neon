@@ -46,6 +46,8 @@ conditionalTags:
 		phpstan.rules.rule: %spaghettiRules.enabled%
 	O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoSpaceshipOperatorRule:
 		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoInstanceofRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
 	# Structure
 	O0h\PHPStanSpaghetti\Rules\Spaghetti\Structure\NoNamespaceRule:
 		phpstan.rules.rule: %spaghettiRules.enabled%
@@ -91,6 +93,8 @@ services:
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoNullCoalesceRule
 	-
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoSpaceshipOperatorRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoInstanceofRule
 	# Structure
 	-
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Structure\NoNamespaceRule
