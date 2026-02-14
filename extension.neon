@@ -39,6 +39,8 @@ conditionalTags:
 		phpstan.rules.rule: %spaghettiRules.enabled%
 	O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoObjectAccessRule:
 		phpstan.rules.rule: %spaghettiRules.enabled%
+	O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoTypeCheckFunctionRule:
+		phpstan.rules.rule: %spaghettiRules.enabled%
 	# Operators
 	O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoTernaryOperatorRule:
 		phpstan.rules.rule: %spaghettiRules.enabled%
@@ -86,6 +88,8 @@ services:
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoObjectInstantiationRule
 	-
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoObjectAccessRule
+	-
+		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\ObjectOriented\NoTypeCheckFunctionRule
 	# Operators
 	-
 		class: O0h\PHPStanSpaghetti\Rules\Spaghetti\Operators\NoTernaryOperatorRule
