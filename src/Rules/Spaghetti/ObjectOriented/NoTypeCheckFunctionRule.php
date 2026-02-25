@@ -20,6 +20,8 @@ final class NoTypeCheckFunctionRule implements Rule
         'is_subclass_of',
         'get_class',
         'get_parent_class',
+        'class_exists',
+        'method_exists',
     ];
 
     public function getNodeType(): string
