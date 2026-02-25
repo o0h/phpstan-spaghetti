@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.6](https://github.com/o0h/phpstan-spaghetti/compare/v0.0.5...v0.0.6) - 2026-02-25
+- add class_exists and method_exists to prohibited type check functions by @o0h in https://github.com/o0h/phpstan-spaghetti/pull/13
+
 ## [v0.0.5](https://github.com/o0h/phpstan-spaghetti/compare/v0.0.4...v0.0.5) - 2026-02-14
 - add rule to prohibit type check functions in spaghetti code by @o0h in https://github.com/o0h/phpstan-spaghetti/pull/11
 
