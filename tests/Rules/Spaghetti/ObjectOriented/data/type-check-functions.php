@@ -11,5 +11,8 @@ $check2 = is_subclass_of($obj, $className);
 $check3 = get_class($obj);
 $check4 = get_parent_class($obj);
 
+$check5 = class_exists($className);
+$check6 = method_exists($obj, 'someMethod');
+
 // This should be allowed (not a type check function)
-$check5 = is_string($obj);
+$check7 = is_string($obj);

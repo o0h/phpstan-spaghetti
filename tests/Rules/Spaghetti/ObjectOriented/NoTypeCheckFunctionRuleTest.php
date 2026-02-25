@@ -23,6 +23,8 @@ final class NoTypeCheckFunctionRuleTest extends RuleTestCase
             ['Type check function is_subclass_of() is not allowed in spaghetti code. Spaghetti code shouldn\'t use objects anyway.', 10],
             ['Type check function get_class() is not allowed in spaghetti code. Spaghetti code shouldn\'t use objects anyway.', 11],
             ['Type check function get_parent_class() is not allowed in spaghetti code. Spaghetti code shouldn\'t use objects anyway.', 12],
+            ['Type check function class_exists() is not allowed in spaghetti code. Spaghetti code shouldn\'t use objects anyway.', 14],
+            ['Type check function method_exists() is not allowed in spaghetti code. Spaghetti code shouldn\'t use objects anyway.', 15],
         ]);
     }
 
